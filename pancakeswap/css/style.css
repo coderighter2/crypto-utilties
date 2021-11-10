@@ -1,0 +1,151 @@
+* {
+    font-family: Kanit, sans-serif;
+}
+
+body {
+    background: #F9F9F9;
+    margin: unset;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    overflow-y: scroll;
+}
+
+.section {
+    flex: 1 1 33%;
+    max-width: 33%;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 32px;
+    box-shadow: rgb(25 19 38 / 10%) 0px 2px 12px -8px, rgb(25 19 38 / 5%) 0px 1px 1px;
+}
+
+.section-content .title {
+    font-size: 1.2em;
+    text-align: center;
+    word-wrap: break-word;
+    color: rgb(69, 42, 122);
+    font-weight: 600;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 234, 244);
+    border-radius: 16px;
+    padding: 10px 20px;
+    box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px -1px inset;
+    margin: 10px 0px;
+}
+.input-container > * {
+    margin: 5px 0px;
+}
+
+.input-container .name {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 14px;
+    color: rgb(69, 42, 122);
+}
+
+.input-container > input, .input-container > textarea {
+    color: rgb(69, 42, 122);
+    position: relative;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    flex: 1 1 auto;
+    background-color: transparent;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px;
+    appearance: textfield;
+}
+
+.input-container > textarea {
+    white-space: break-spaces;
+}
+
+.section-content > button {
+    -webkit-box-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-box-pack: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px;
+    background-color: rgb(31, 199, 212);
+    color: white;
+    width: 100%;
+}
+
+.section-content > button:hover {
+    opacity: 0.65;
+}
+
+.section-content > button:active {
+    opacity: 0.85;
+}
+
+.help-box {
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgb(25 19 38 / 10%) 0px 2px 12px -8px, rgb(25 19 38 / 5%) 0px 1px 1px;
+    background: white;
+    padding: 20px;
+}
+
+.debug-container {
+    flex: 1 1 auto;
+    max-width: 100%;;
+    padding-left: 20px;
+}
+
+.debug-container textarea {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1199px) {
+
+    .section {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .section {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
